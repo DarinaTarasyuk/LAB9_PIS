@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Паттерн MVC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+<form [formGroup]="rectangleForm" (ngSubmit)="add(rectangleForm.value)">
+<ion-card>
+  <ion-card-header>
+    Прямокутник
+  </ion-card-header>
+  <ion-card-content>  
+      <ion-item>
+      <input id="a" type="text" 
+        label="Сторона A:" 
+        labelPlacement="floating"
+        type="number" 
+        min="1" max="100" 
+        formControlName="a"
+        >
+      </ion-item>
+      <ion-item>
+          <input id="b" type="text" 
+          label="Сторона B:" labelPlacement="floating"
+          type="number" min="1" max="100" 
+          formControlName="b">
+      </ion-item>
+      </ion-card-content>
+</ion-card>
+  <ion-button 
+  type="submit"  color="success"
+  expand="block"  [disabled]="!rectangleForm.valid">
+  Обрахувати площу і периметр прямокутника
+</ion-button>
+</form>
+<ion-item *ngFor="let rec of  rectangles;">
+P={{rec.p}}
+S={{rec.s}}
+</ion-item>
+  </ion-content>

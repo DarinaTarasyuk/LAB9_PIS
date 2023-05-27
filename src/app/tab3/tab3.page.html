@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     Паттерн MVVM
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card >
+    <ion-card-header> Прямокутник </ion-card-header>
+      <ion-card-content>
+        <ion-item color="transparent" lines="none">
+          <ion-input label="Сторона a" labelPlacement="floating" #inputA 
+            type="number" value="4"></ion-input>
+        </ion-item>
+        
+        <ion-item color="transparent" lines="none">
+          <ion-input label="Сторона b" labelPlacement="floating" #inputB 
+              type="number" value="5"></ion-input>
+        </ion-item>
+
+        <ion-label>
+          {{ras(inputA.value,inputB.value)}}
+        </ion-label>
+
+        <ion-item color="transparent" lines="none">
+          <ion-label> Периметр P = </ion-label>
+          <ion-label> {{rectangle.p}} </ion-label>
+        </ion-item>
+
+        <ion-item color="transparent" lines="none">
+          <ion-label> Площа S = </ion-label>
+          <ion-label> {{rectangle.s}} </ion-label>
+        </ion-item>
+        
+      </ion-card-content>
+  </ion-card>
+</ion-content>

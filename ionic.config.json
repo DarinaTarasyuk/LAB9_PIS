@@ -1,0 +1,7 @@
+{
+  "name": "LAB9_PIS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
